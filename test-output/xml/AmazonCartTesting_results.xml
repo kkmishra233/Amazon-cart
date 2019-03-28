@@ -1,112 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Amazon cart testing "
-           tests="12"
-           failures="1"
+           tests="10"
+           failures="0"
            errors="0"
-           skipped="11"
-           time="-1553709103.511">
+           skipped="0"
+           time="81.175">
   <properties />
-            <testcase name="beforeSuite" time="3.555" classname="AmazonCartTesting">
-                <failure type="org.openqa.selenium.SessionNotCreatedException"
-                  message="session not created: This version of ChromeDriver only supports Chrome version 74
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 837 milliseconds
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;KKMISHRA&apos;, ip: &apos;192.168.99.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: driver.version: ChromeDriver"
-              >
-<![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 74
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 837 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'KKMISHRA', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: driver.version: ChromeDriver
-  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-  org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$new$0(JsonWireProtocolResponse.java:53)
-  org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$getResponseFunction$2(JsonWireProtocolResponse.java:91)
-  org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
-  java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-  java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-  java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
-  java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
-  java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
-  java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-  java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
-  java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-  java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
-  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
-  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
-  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
-  org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
-  org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
-  org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
-  BaseTest.beforeSuite(BaseTest.java:31)
-  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.lang.reflect.Method.invoke(Method.java:498)
-  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:131)
-  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
-  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:511)
-  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:241)
-  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:338)
-  org.testng.SuiteRunner.run(SuiteRunner.java:302)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1145)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1067)
-  org.testng.TestNG.runSuites(TestNG.java:997)
-  org.testng.TestNG.run(TestNG.java:965)
-  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
-  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-]]>
-      </failure>
-
-          </testcase>
-  
-            <testcase name="afterSuite" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="increaseTheNumberOfProductAndVerifyCart" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="removeAllProductFromCartAndVerifyTheChange" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="checkFirstProductAsGift" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="moveProductIntoSaveForLater" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="addProductFromSavedForLaterIntoCartAgain" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="addProductIntoCartAndVerifyCart" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="verifyAmazonHomePage" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="removeAProductFromCartAndVerifyTheChange" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="searchProductAndVerifyList" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
-            <testcase name="addAnotherProductAndVerifyCartChange" time="0.0" classname="AmazonCartTesting">
-          <skipped />
-    </testcase>
   
   
+            <testcase name="addAnotherProductAndVerifyCartChange" time="14.862" classname="AmazonCartTesting" />
+                <testcase name="removeAllProductFromCartAndVerifyTheChange" time="5.073" classname="AmazonCartTesting" />
+                <testcase name="removeAProductFromCartAndVerifyTheChange" time="5.810" classname="AmazonCartTesting" />
+                <testcase name="addProductIntoCartAndVerifyCart" time="17.508" classname="AmazonCartTesting" />
+                <testcase name="checkFirstProductAsGift" time="5.377" classname="AmazonCartTesting" />
+                <testcase name="moveProductIntoSaveForLater" time="4.924" classname="AmazonCartTesting" />
+                <testcase name="addProductFromSavedForLaterIntoCartAgain" time="5.287" classname="AmazonCartTesting" />
+                <testcase name="verifyAmazonHomePage" time="3.152" classname="AmazonCartTesting" />
+                <testcase name="searchProductAndVerifyList" time="8.525" classname="AmazonCartTesting" />
+                <testcase name="increaseTheNumberOfProductAndVerifyCart" time="10.657" classname="AmazonCartTesting" />
+      
 </testsuite>

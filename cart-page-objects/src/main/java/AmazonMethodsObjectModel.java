@@ -7,6 +7,7 @@ public class AmazonMethodsObjectModel extends BaseMethods {
     private By submitSearch = By.xpath("//input[@value='Go']");
     private By searchList = By.xpath("//div[@class='s-result-list sg-row']");
     private By firstFromSearchList = By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[1]");
+    private By SecondFromSearchList = By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[2]");
     private By productTitle = By.id("productTitle");
     private By addToCart = By.id("add-to-cart-button");
     private By goToCart = By.id("hlb-view-cart-announce");
@@ -27,51 +28,73 @@ public class AmazonMethodsObjectModel extends BaseMethods {
     private By addToCartFromSaveLaterWindow = By.xpath("(//span[@class='a-declarative' and @ data-action='sc-item-action']/input[@value='Move to Cart'])");
     private By moveTocartFromSavedLaterMessage = By.xpath("(//div[@data-action='move-to-cart']/span[text()[contains(.,'has been moved to Shopping Cart')]])[2]");
 
-
-
     protected AmazonMethodsObjectModel(WebDriver driver) {
-
         super(driver);
         driver.get("https://www.amazon.com");
 
     }
 
     public void searchProduct(String productName){
+        waitForElementToAppear(productSearchArea);
         driver.findElement(productSearchArea).sendKeys(productName);
     }
 
-    public void submitProductSearch(){
+    public void submitProductSearch()
+    {
+        waitForElementToAppear(submitSearch);
         driver.findElement(submitSearch).click();
     }
 
-    public void searchListDisplayed(){
+    public void searchListDisplayed()
+    {
+        waitForElementToAppear(searchList);
         super.waitForElementToAppear(searchList);
     }
 
-    public String verifyProductIsAvailableIntoResult(){
-        return driver.findElement(firstFromSearchList).getText();
+    public String verifyProductIsAvailableIntoResult()
+    {
+        waitForElementToAppear(SecondFromSearchList);
+        return driver.findElement(SecondFromSearchList).getText();
     }
 
-    public void selectFirstItemFromProductSearList(){
+    public void selectFirstItemFromProductSearList()
+    {
+        waitForElementToAppear(firstFromSearchList);
         driver.findElement(firstFromSearchList).click();
     }
+
+    public void selectSecondItemFromProductSearList()
+    {
+        waitForElementToAppear(SecondFromSearchList);
+        driver.findElement(SecondFromSearchList).click();
+    }
+
     public void verifyProductTitleInProductPage(){
+        waitForElementToAppear(productTitle);
         super.waitForElementToAppear(productTitle);
     }
-    public void addProductToShoppingCart(){
+    public void addProductToShoppingCart()
+    {
+        waitForElementToAppear(addToCart);
         driver.findElement(addToCart).click();
     }
-    public void navigateToShoppingCart(){
+    public void navigateToShoppingCart()
+    {
+        waitForElementToAppear(goToCart);
         driver.findElement(goToCart).click();
     }
     public String verifyShoppingCartIsDisplayed(){
         waitForElementToAppear(shoppingCartHeader);
         return driver.findElement(shoppingCartHeader).getText();
     }
-    public String verifyProductNameAvailableIntoCart(){
+    public String verifyProductNameAvailableIntoCart()
+    {
+        waitForElementToAppear(productAddedIntoCart);
         return driver.findElement(productAddedIntoCart).getText();
     }
-    public String verifyProductPriceInCart(){
+    public String verifyProductPriceInCart()
+    {
+        waitForElementToAppear(productPriceInCartpage);
         return driver.findElement(productPriceInCartpage).getText();
     }
     public String verifyCartSubTotal(){
@@ -79,7 +102,9 @@ public class AmazonMethodsObjectModel extends BaseMethods {
         staticWait();
         return driver.findElement(cartSubtotal).getText();
     }
-    public String verifyQuantityOfAddedProduct(){
+    public String verifyQuantityOfAddedProduct()
+    {
+        waitForElementToAppear(productQuantity);
         return driver.findElement(productQuantity).getText();
     }
     public void increaseProductQuanityToTen(){
@@ -95,31 +120,44 @@ public class AmazonMethodsObjectModel extends BaseMethods {
     }
 
     public void checkProductShouldShipAsGift(){
+        waitForElementToAppear(checkProductIsSelectedToShippedAsGifted);
         super.staticWait();
         driver.findElement(checkProductIsSelectedToShippedAsGifted).click();
     }
 
-    public void deleteFirstItemFromCart(){
+    public void deleteFirstItemFromCart()
+    {
+        waitForElementToAppear(deleteFirstItemFromCart);
         driver.findElement(deleteFirstItemFromCart).click();
     }
-    public void deleteSecondItemFromCart(){
+    public void deleteSecondItemFromCart()
+    {
+        waitForElementToAppear(deleteSecondItemFromCart);
         driver.findElement(deleteSecondItemFromCart).click();
     }
 
-    public void moveFirstProductIntoSaveForLater(){
+    public void moveFirstProductIntoSaveForLater()
+    {
+        waitForElementToAppear(saveForLater);
         driver.findElement(saveForLater).click();
     }
-    public void verifyproductMovedinSavedForLaterMessage(){
+    public void verifyproductMovedinSavedForLaterMessage()
+    {
+        waitForElementToAppear(movedInSaveLaterMessage);
         driver.findElement(movedInSaveLaterMessage);
     }
     public void verifyproductMovedINtoCartfromSavedForLater(){
         staticWait();
         driver.findElement(moveTocartFromSavedLaterMessage);
     }
-    public void goToCartWindow(){
+    public void goToCartWindow()
+    {
+        waitForElementToAppear(navigateToCartWindow);
         driver.findElement(navigateToCartWindow).click();
     }
-    public void addMovedProductIntoCartAgain(){
+    public void addMovedProductIntoCartAgain()
+    {
+        waitForElementToAppear(addToCartFromSaveLaterWindow);
         driver.findElement(addToCartFromSaveLaterWindow).click();
     }
 }

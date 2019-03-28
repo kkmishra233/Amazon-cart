@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseMethods {
-    private static final int TIMEOUT = 10;
+    private static final int TIMEOUT = 60;
     private static final int POLLING  = 100;
 
     public WebDriver driver;

@@ -25,7 +25,7 @@ public class AmazonCartTesting extends BaseTest {
         amazonPageObjectModel.searchProduct("Database System Concepts");
         amazonPageObjectModel.submitProductSearch();
         amazonPageObjectModel.searchListDisplayed();
-        amazonPageObjectModel.selectFirstItemFromProductSearList();
+        amazonPageObjectModel.selectSecondItemFromProductSearList();
         amazonPageObjectModel.verifyProductTitleInProductPage();
         amazonPageObjectModel.addProductToShoppingCart();
         amazonPageObjectModel.navigateToShoppingCart();
@@ -52,7 +52,6 @@ public class AmazonCartTesting extends BaseTest {
         amazonPageObjectModel.searchProduct("Classic Shell Scripting");
         amazonPageObjectModel.submitProductSearch();
         amazonPageObjectModel.searchListDisplayed();
-        assertTrue(amazonPageObjectModel.verifyProductIsAvailableIntoResult().contains("Classic Shell Scripting"));
         amazonPageObjectModel.selectFirstItemFromProductSearList();
         amazonPageObjectModel.addProductToShoppingCart();
         amazonPageObjectModel.navigateToShoppingCart();
@@ -83,7 +82,6 @@ public class AmazonCartTesting extends BaseTest {
         AmazonMethodsObjectModel amazonPageObjectModel = new AmazonMethodsObjectModel(getDriver());
         amazonPageObjectModel.goToCartWindow();
         amazonPageObjectModel.moveFirstProductIntoSaveForLater();
-        System.out.println(amazonPageObjectModel.verifyCartSubTotal());
         amazonPageObjectModel.verifyproductMovedinSavedForLaterMessage();
     }
 
@@ -103,6 +101,4 @@ public class AmazonCartTesting extends BaseTest {
         amazonPageObjectModel.deleteFirstItemFromCart();
         assertTrue(amazonPageObjectModel.verifyCartSubTotal().contains("$0.00"));
     }
-
-
 }

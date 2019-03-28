@@ -2,6 +2,8 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -27,7 +29,7 @@ public class BaseTest {
         }
         if(driver == null) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("incognito");
             driver = new ChromeDriver(chromeOptions);
         } else{
             driver = new ChromeDriver();
@@ -38,6 +40,7 @@ public class BaseTest {
         if(null != driver) {
             driver.close();
             driver.quit();
+            driver = null;
         }
     }
 

@@ -2,21 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile name="Maven default annotation processors profile">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cart-framework" />
         <module name="cart-page-objects" />
         <module name="cart-tests" />
-        <module name="cartdomain" />
-        <module name="cartframework" />
-        <module name="cartpageobjects" />
-        <module name="carttests" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cart-domain" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

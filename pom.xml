@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>cart-framework</module>
+        <module>cart-domain</module>
         <module>cart-page-objects</module>
         <module>cart-tests</module>
     </modules>
